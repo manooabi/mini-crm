@@ -1,0 +1,8 @@
+php artisan make:migration add_role_as_to_users --table=users
+
+
+php artisan  migrate
+
+php artisan make:middleware AdminMiddleware
+
+Register middleware in kernel
