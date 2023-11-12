@@ -13,6 +13,11 @@ class UserController extends Controller
         $users = User::all();
         return view('admin.user.index',compact('users'));
     }
+    public function create()
+    {
+        $users = User::all();
+        return view('admin.user.create',compact('users'));
+    }
     public function edit($user_id)
     {
         $user = User::find($user_id);
@@ -28,5 +33,11 @@ class UserController extends Controller
             return redirect('admin/users')->with('message','Updated succesfully');
         }
         return redirect('admin/users')->with('message','No User Found');
+    }
+    public function destroy($user_id)
+    {
+        $user = User::find($user_id);
+        $user -> delete();
+        return redirect('admin/users') -> with('message','User Deleted Successfully');
     }
 }

@@ -65,9 +65,11 @@ Route::get('employees',[EmployeeController::class,'index']);
  Route::get('users',[UserController::class,'index']);
 
  Route::get('user/{user_id}',[UserController::class,'edit']);
-
+ Route::get('add-user',[UserController::class,'create']);
+ Route::post('add-user',[UserController::class,'store']);
 
  Route::put('update-user/{user_id}',[UserController::class,'update']);
+ Route::get('delete-user/{user_id}',[UserController::class,'destroy']);
 
 
 

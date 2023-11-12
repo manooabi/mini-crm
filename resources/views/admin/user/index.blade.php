@@ -6,7 +6,8 @@
 
 <div class="card mt-4">
     <div class="card-header">
-         <h4>View Users </h4> 
+         <h4>View Users  
+        </h4> 
     </div>
     <div class="card-body">
 
@@ -22,6 +23,7 @@
                 <th>Email</th>
                 <th>Role</th>
                 <th>Edit</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -33,6 +35,9 @@
                 <td>{{$item -> role_as == '1' ? 'Admin':'User'}}</td>
                 <td>
                     <a href="{{ url('admin/user/'.$item -> id)}}" class="btn btn-success">Edit</a>
+                </td>
+                <td>
+                    <a href="{{ url('admin/delete-user/'.$item -> id)}}" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
             @endforeach

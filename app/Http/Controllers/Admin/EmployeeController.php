@@ -34,7 +34,6 @@ class EmployeeController extends Controller
         $employee -> email = $data['email'];
         $employee -> phone = $data['phone'];
         $employee -> save();
-
         return redirect('admin/employees') -> with('message','Employee Added Successfully');
     }
     public function edit($employee_id)
