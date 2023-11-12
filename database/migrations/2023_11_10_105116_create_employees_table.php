@@ -17,8 +17,8 @@ return new class extends Migration
             $table-> string('lastname');
             $table-> string('email')->unique();
             $table-> string('phone');
-            $table->integer('comapany_id')->unsigned();
-            $table->foreign('comapany_id')->references('id')->on('companies')->onDelete('cascade');
+            $table->integer('company_id')->unsigned();
+            $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
             $table->timestamps();
         });
     }

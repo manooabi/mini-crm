@@ -18,8 +18,8 @@ class Company extends Model
 
     ];
 
-    // public function employees()
-    // {
-    //     return $this -> hasMany(Post::class,'category_id','id');
-    // }
+    public function employees()
+    {
+        return $this -> hasMany(Employee::class,'company_id','id');
+    }
 }

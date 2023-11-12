@@ -10,7 +10,7 @@ class DashBoardController extends Controller
     public function index()
     {
        
-        return 'i am dashbaord';
-    //    return view('admin.dashboard');
+        //return 'i am dashbaord';
+      return view('admin.dashboard');
     }
 }
